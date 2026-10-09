@@ -1,0 +1,38 @@
+/* House print style for report PDFs: one sans face, hairline rules, grey secondary text,
+   tables that keep their header on every page and never split a row. A4 margins are set
+   by render_pdf.js (18 mm sides, 20 mm top/bottom) so the footer can live in them. */
+@page { size: A4; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: 'Noto Sans', 'Liberation Sans', Arial, sans-serif; font-size: 10pt; line-height: 1.45; color: #1a1a1a; }
+h1 { font-size: 21pt; font-weight: 600; line-height: 1.2; margin: 0 0 6pt; letter-spacing: -0.01em; }
+.meta { color: #5a5a5a; font-size: 9.5pt; margin: 0 0 4pt; }
+.meta b { color: #1a1a1a; font-weight: 500; }
+hr.title { border: 0; border-top: 1.5px solid #1a1a1a; margin: 12pt 0 14pt; }
+h2 { font-size: 13pt; font-weight: 600; margin: 18pt 0 8pt; padding-top: 9pt; border-top: 0.75px solid #d9d9d9; break-after: avoid; page-break-after: avoid; }
+h2:first-of-type, h2.first { margin-top: 0; border-top: 0; padding-top: 0; }
+h3 { font-size: 10.5pt; font-weight: 600; margin: 10pt 0 4pt; break-after: avoid; page-break-after: avoid; }
+p { margin: 0 0 8pt; }
+p.lead { font-size: 10.5pt; break-after: avoid; page-break-after: avoid; }
+ul, ol { margin: 0 0 8pt; padding-left: 16pt; }
+li { margin: 0 0 4pt; padding-left: 2pt; }
+strong { font-weight: 600; }
+figure { margin: 10pt 0 12pt; break-inside: avoid; page-break-inside: avoid; }
+figure svg { width: 100%; height: auto; }
+figcaption { font-size: 8.5pt; color: #5a5a5a; margin-top: 2pt; }
+table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; font-size: 9pt; break-before: avoid; page-break-before: avoid; }
+thead { display: table-header-group; }
+th { text-align: left; font-weight: 600; font-size: 8.5pt; color: #1a1a1a; border-bottom: 1.25px solid #1a1a1a; padding: 0 6pt 5pt 0; vertical-align: bottom; }
+td { border-bottom: 0.5px solid #dcdcdc; padding: 5pt 6pt 5pt 0; vertical-align: top; }
+tr { break-inside: avoid; page-break-inside: avoid; }
+th.n, td.n { width: 26pt; color: #5a5a5a; }
+th.s, td.s { width: 64pt; white-space: nowrap; }
+th.h, td.h, th.num, td.num { text-align: right; padding-right: 0; white-space: nowrap; font-variant-numeric: tabular-nums; }
+th.h, td.h { width: 70pt; }
+tr.total td { border-bottom: 0; border-top: 1px solid #1a1a1a; font-weight: 600; }
+.chg { display: block; font-weight: 600; margin-bottom: 2pt; }
+.work { display: block; color: #5a5a5a; font-size: 8.5pt; line-height: 1.35; }
+.page-break { break-after: page; page-break-after: always; }
+code { font-family: 'Liberation Mono', 'DejaVu Sans Mono', monospace; font-size: 8.5pt; }
+pre { font-family: 'Liberation Mono', 'DejaVu Sans Mono', monospace; font-size: 8.5pt; padding: 6pt 8pt; border: 0.5px solid #dcdcdc; white-space: pre-wrap; }
+blockquote { margin: 0 0 8pt; padding-left: 10pt; border-left: 1.5px solid #d9d9d9; color: #5a5a5a; }

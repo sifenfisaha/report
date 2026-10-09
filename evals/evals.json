@@ -1,0 +1,23 @@
+{
+  "skill_name": "report",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "i recorded our client call, it's at ~/Videos/calls/client-call-oct.mp4. pull out the transcript and tell me every change he asked for",
+      "expected_output": "A transcript file with timestamps saved next to the recording, screen notes if a document was shared, then a question about what deliverable is wanted, then a grouped bullet list of the requested changes with timestamps.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "there's a 40 minute standup recording in this folder (meet-2026-10-13.webm). I need action items with owners for the team, as a pdf I can drop in slack",
+      "expected_output": "Extraction and transcription run locally; after asking what is needed (or taking the stated need), a one or two page PDF with an action-item table (owner, action, by when, source timestamp) in the house style, checked page by page.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "my boss sent a voice note (m4a) walking through what the new dashboard should do. can you write it up properly",
+      "expected_output": "Audio-only path: no contact sheets, transcript with a vocabulary prompt, then a short written requirements note grouped by area with timestamps, offered in markdown and optionally as a PDF.",
+      "files": []
+    }
+  ]
+}
